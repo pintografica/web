@@ -52,9 +52,6 @@ body {
     }
 }
 
-/* Fin de la maquetación 
-_____________________________________________________________________ */
-
 /* CABECERA DEL SITIO */
 
 body {
@@ -99,6 +96,9 @@ body > nav {
     width: 100%;
 }
 
+/* Fin de la cabecera 
+_____________________________________________________________________ */
+
 a {
     text-decoration: none;
     color: var(--color-a);
@@ -116,7 +116,7 @@ a {
 } */
 
 article.galeria-flex {
-    background-color: #54e899;
+    background-color: var(--color-logo-secundario);
 }
 
 ul {
@@ -142,7 +142,7 @@ header.portada {
         padding: 1em;
         text-align: center;
         color: #fff;
-        background-color: var(--color-logo-principal);
+        background-color: var(--color-logo-acento);
 
         &:hover {
             background-color: var(--bg-h2-color-secundario);
