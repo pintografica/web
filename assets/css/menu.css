@@ -167,7 +167,6 @@ nav.principal {
     }
 
     background-color: var(--color-logo-acento);
-    font-size: 1.3em;
     color: #fff;
 
     & > ul {
