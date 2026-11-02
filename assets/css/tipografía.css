@@ -7,7 +7,6 @@
 
 html {
     font-family: var(--fontfamily-textos);
-    font-size: 0.8em;
 }
 
 body,
@@ -30,7 +29,6 @@ h6 {
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
-    font-size: 1.2em;
 }
 
 h3 {
@@ -39,4 +37,64 @@ h3 {
     &::first-letter {
         color: var(--color-logo-acento);
     }
+}
+
+/* Tamaño de la fuente */
+
+html {
+    font-size: 16px;
+
+    & body {
+        font-size: 100%;
+        line-height: 1.6;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: var(--font-size-xxxl);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 1.5em;
+}
+
+h3 {
+    font-size: var(--font-size-xxl);
+    color: var(--color-1);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+h5 {
+    font-size: var(--font-size-l);
+}
+h6 {
+    font-size: var(--font-size-m);
+}
+
+p,
+ul,
+ol,
+li,
+a {
+    font-size: var(--font-size-m);
+}
+
+figcaption,
+small,
+footer ul li a {
+    font-size: var(--font-size-s);
 }
