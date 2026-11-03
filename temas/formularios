@@ -90,6 +90,7 @@
                 <form action="../contacto/enviado.html" method="get" enctype="multipart/form-data" id="form" class="form">
                     <fieldset>
                         <legend>Formulario de inscripción al curso</legend>
+
                         <fieldset>
                             <legend>1. ¿Cuál es tu nivel de conocimientos?</legend>
                             <ul>
@@ -107,9 +108,17 @@
                                 </li>
                             </ul>
                         </fieldset>
+
                         <fieldset>
                             <legend>2. ¿En qué modalidad quieres hacer el curso?</legend>
+                            <select name="modalidad">
+                                <option value="" selected>--Selecciona una opción--</option>
+                                <option value="1">Presencial</option>
+                                <option value="2">Online</option>
+                                <option value="3">Semipresencial</option>
+                            </select>
                         </fieldset>
+
                         <fieldset>
                             <legend>3. ¿Qué temas te interesan?</legend>
                             <ul>
@@ -135,6 +144,7 @@
                                 </li>
                             </ul>
                         </fieldset>
+
                         <fieldset>
                             <legend>4. ¿Tienes experiencia previa?</legend>
                             <ul>
@@ -148,6 +158,7 @@
                                 </li>
                             </ul>
                         </fieldset>
+
                         <fieldset>
                             <legend>5. ¿Qué días tienes disponible?</legend>
                             <ul>
@@ -173,8 +184,28 @@
                                 </li>
                             </ul>
                         </fieldset>
+
                         <fieldset>
                             <legend>6. ¿Cómo has conocido el curso?</legend>
+                            <select name="fuente">
+                                <option value="" selected>--Selecciona una opción--</option>
+                                <option value="1">Redes sociales</option>
+                                <option value="2">Internet</option>
+                                <option value="3">Amigos o familiares</option>
+                                <option value="3">Publicidad</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>7. ¿Cuál es tu provincia?</legend>
+                            <label for="localidad">Escribe la provincia donde vives</label>
+                            <input type="text" name="localidad" id="localidad" list="ProvinciasGalicia" />
+                            <datalist id="ProvinciasGalicia">
+                                <option>Lugo</option>
+                                <option>Pontevedra</option>
+                                <option>Ourense</option>
+                                <option>A Coruña</option>
+                            </datalist>
                         </fieldset>
                     </fieldset>
                     <ul class="enviar">
