@@ -33,6 +33,7 @@
         <link rel="stylesheet" href="../assets/css/variables.css" />
         <link rel="stylesheet" href="../assets/css/logo.css" />
         <link rel="stylesheet" href="../assets/css/estilos8.css" />
+        <link rel="stylesheet" href="../assets/css/formularios.css" />
 
         <!-- Título de la pestaña del navegador -->
         <title>UF1303 y UF1303 | Web de ejercicios de curso de creación de páginas web</title>
@@ -83,7 +84,7 @@
             <article>
                 <h3>Formulario de contacto</h3>
 
-                <form action="enviado.html" method="post" class="form" id="form">
+                <form action="enviado.html" method="post" enctype="multipart/form-data" class="form" id="form">
                     <fieldset>
                         <legend>Datos personales</legend>
                         <ul>
@@ -129,6 +130,16 @@
                             </li>
                         </ul>
                     </fieldset>
+                    <p id="errores"></p>
+                    <ul class="enviar">
+                        <li>
+                            <input type="submit" value="Enviar" id="enviar" />
+                            <!-- <button type="submit">Enviar</button> -->
+                        </li>
+                        <li>
+                            <input type="reset" value="Borrar" />
+                        </li>
+                    </ul>
                 </form>
             </article>
         </main>
