@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Juego de caracteres de casi todos los idiomas humanos (incluidos ñ, tildes ...) -->
+        <meta charset="utf-8" />
+        <!-- Escala inicial y renderizado _responsive_ por el ancho del dispositivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Compatibilidad con Microsoft Explorer -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Indéxame NO y sígueme NO -->
+        <meta name="robots" content="noIndex, noFollow" />
+        <!-- Breve descripción del sitio que se verá en los resultados de búsqueda -->
+        <meta name="description" content="Sitio web de prueba elaborado en el curso de Confección y Publicación de Páginas Web (IFCD0110). Unidad Formativa UF1303, Elaboración de hojas de estilos" />
+        <!-- Ruta al favicon -->
+        <!-- Utilícese una hoja de estilos Normalize -->
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+        <!-- Ruta a las hojas de estilos -->
+        <!-- Tipografía -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap" rel="stylesheet" />
+        <!-- Tipografía para títulos -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet" />
+        <!-- Estilos -->
+        <link rel="stylesheet" href="../assets/css/visibilidad.css" />
+        <link rel="stylesheet" href="../assets/css/hover.css" />
+        <link rel="stylesheet" href="../assets/css/transicions.css" />
+
+        <link rel="stylesheet" href="../assets/css/tipografía.css" />
+        <link rel="stylesheet" href="../assets/css/menu.css" />
+        <link rel="stylesheet" href="../assets/css/variables.css" />
+        <link rel="stylesheet" href="../assets/css/logo.css" />
+        <link rel="stylesheet" href="../assets/css/estilos8.css" />
+        <link rel="stylesheet" href="../assets/css/formularios.css" />
+
+        <!-- Título de la pestaña del navegador -->
+        <title>UF1303 y UF1303 | Web de ejercicios de curso de creación de páginas web</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html" class="no-border" title="Página principal">
+                <figure class="logo"></figure>
+                <h1 class="pechado">Página de contacto</h1>
+            </a>
+        </header>
+
+        <nav class="principal" aria-label="Navegación principal">
+            <h2 class="pechado">Menú Principal</h2>
+            <input id="icon-menu" name="icon-menu" type="checkbox" />
+            <label for="icon-menu" class="icon-menu" aria-label="Abrir/Cerrar menú">Menú</label>
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Temas</a>
+                    <ul>
+                        <li>
+                            <a href="textos.html">Textos</a>
+                        </li>
+                        <li>
+                            <a href="imagenes.html">Imágenes</a>
+                        </li>
+                        <li>
+                            <a href="../temas/formularios">Formularios</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../legal/lopd.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="../contacto/contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="agua">
+            <section>
+                <header class="galeria-before portada">
+                    <h2 class="pinto-mayusculas">Formularios</h2>
+                </header>
+            </section>
+            <article>
+                <h3>Formulario de contacto</h3>
+
+                <form action="enviado.html" method="post" enctype="multipart/form-data" class="form" id="form">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <ul>
+                            <li>
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name" placeholder="Nombre o alias" required />
+                            </li>
+                            <li>
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" id="email" placeholder="Correo electrónico" required />
+                            </li>
+                            <li>
+                                <label for="">Teléfono</label>
+                                <input type="tel" name="tfno" id="tfno" placeholder="Número de teléfono" />
+                            </li>
+                            <li>
+                                <label for="edad">Edad</label>
+                                <input type="number" name="edad" id="edad" placeholder="Tu edad" />
+                            </li>
+                            <!-- Los de tipo radio tienen que tener el mismo name -->
+                            <li class="radio">
+                                <input type="radio" name="genero" value="hombre" id="hombre" />
+                                <label for="hombre">Hombre</label>
+                            </li>
+                            <li class="radio">
+                                <input type="radio" name="genero" value="mujer" id="mujer" />
+                                <label for="mujer">Mujer</label>
+                            </li>
+                            <li class="radio">
+                                <input type="radio" name="genero" value="no-binario" id="no-binario" />
+                                <label for="no-binario">No binario</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="acepto" id="acepto" required />
+                                <label for="acepto">
+                                    Acepto el tratamiento de mis datos personales. Más información en
+                                    <a href="#">Política de tratamiento de datos personales</a>
+                                </label>
+                            </li>
+                            <li class="textarea">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea placeholder="Escribe tu mensaje aquí" name="mensaje" id="mensaje" cols="30" rows="5" required></textarea>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <p id="errores"></p>
+                    <ul class="enviar">
+                        <li>
+                            <input type="submit" value="Enviar" id="enviar" />
+                            <!-- <button type="submit">Enviar</button> -->
+                        </li>
+                        <li>
+                            <input type="reset" value="Borrar" />
+                        </li>
+                    </ul>
+                </form>
+            </article>
+        </main>
+        <footer></footer>
+    </body>
+</html>
