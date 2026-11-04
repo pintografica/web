@@ -84,7 +84,7 @@
 
         <main class="agua">
             <section>
-                <header class="img-before portada">
+                <header class="galeria-before portada">
                     <h2>Formularios HTMl5 y patrones</h2>
                 </header>
                 <article>
@@ -117,7 +117,7 @@
                                         - Exactamente 5 dígitos.
                                         - Los dos primeros dígitos (provincia) van del 01 al 52.
                                     -->
-                                    <input type="text" id="cp" name="cp" pattern="[0-5]{1}[0-9]{4}" required inputmode="numeric" title="El código postal solo debe contener los cinco números" />
+                                    <input type="text" id="cp" name="cp" pattern="(0[1-9]|[1-4][0-9]|5" required inputmode="numeric" title="El código postal solo debe contener los cinco números" />
                                 </li>
                                 <li>
                                     <label for="movil">Teléfono móvil</label>
@@ -172,8 +172,9 @@
                                     <!-- 
                                         REQUISITOS:
                                         - Formato HH:MM, de 00:00 a 23:59.
+                                        Esto no valió: "[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}"
                                     -->
-                                    <input type="text" id="hora" name="hora" pattern="[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}" title="Formato HH:MM entre 00:00 y 23:59" />
+                                    <input type="text" id="hora" name="hora" pattern="(0[1-9]|[1-4][0-9]|5[0-2])" title="Formato HH:MM entre 00:00 y 23:59" />
                                 </li>
                                 <li>
                                     <label for="precio">Precio en euros</label>
@@ -181,7 +182,7 @@
                                         REQUISITOS:
                                         - Número entero, o con coma y 1 o 2 decimales. Sin punto ni símbolo €.
                                     -->
-                                    <input type="text" id="precio" name="precio" required inputmode="decimal" title="" />
+                                    <input type="number" id="precio" name="precio" required inputmode="decimal" title="" pattern="[0-9]*(\.[0-9]{1,2})?" min="0.01" step="0.01" />
                                 </li>
                             </ul>
                         </fieldset>
@@ -203,7 +204,9 @@
                                         NOTA: no detecta fechas imposibles como 31/02/2025; 
                                         para eso hace falta JavaScript o type="date".
                                     -->
-                                    <input type="text" id="fecha" name="fecha" required title="Formato dd/mm/aaaa. Ejemplo: 04/11/2026" />
+                                    <!-- <input type="text" id="fecha" name="fecha" required title="Formato dd/mm/aaaa. Ejemplo: 04/11/2026" /> -->
+
+                                    <input type="date" min="1900-01-01" max="2028-01-01" />
                                 </li>
                                 <li>
                                     <label for="usuario">Nombre de usuario</label>
@@ -213,7 +216,8 @@
                                         - Debe empezar por una letra.
                                         - Después solo letras, números o guion bajo.
                                     -->
-                                    <input type="text" id="usuario" name="usuario" required title="4 a 16 caracteres, empieza por letra; solo letras, números y _" />
+
+                                    <input type="text" id="usuario" name="usuario" required title="4 a 16 caracteres, empieza por letra; solo letras, números y _" pattern="[a-z][a-z0-9_]{3,15}" />
                                 </li>
                                 <li>
                                     <label for="clave">Contraseña</label>
@@ -222,7 +226,10 @@
                                         - Mínimo 8 caracteres.
                                         - Al menos una minúscula, una mayúscula y un número.
                                     -->
-                                    <input type="password" id="clave" name="clave" required title="Mínimo 8 caracteres con al menos una minúscula, una mayúscula y un número" />
+                                    <!-- <input type="password" id="clave" name="clave" required title="Mínimo 8 caracteres con al menos una minúscula, una mayúscula y un número"
+                                    pattern="" /> -->
+
+                                    <input type="password" name="pass" id="pass" minlength="8" maxlength="26" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}$" title="Mínimo 8 caracteres con al menos una minúscula, una mayúscula y un número" />
                                 </li>
                                 <li>
                                     <label for="iban">IBAN español</label>
@@ -234,7 +241,7 @@
                                         VÁLIDOS: ES9121000418450200051332 | ES91 2100 0418 4502 0005 1332
                                         INVÁLIDOS: FR9121000418450200051332 | ES91 2100 
                                     -->
-                                    <input type="text" id="iban" name="iban" required title="" />
+                                    <input type="text" id="iban" name="iban" required title="Introduce un IBAN válido" pattern="ES[0-9]{2}-[0-9]{4}-[0-9]{4}-[0-9]{2}-[0-9]{10}" />
                                 </li>
                             </ul>
                         </fieldset>
