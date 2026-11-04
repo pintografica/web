@@ -2,7 +2,7 @@ section.textos article {
     margin: 0 auto;
 }
 form.form {
-    display: inline-block;
+    display: block;
 }
 
 form.form fieldset {
