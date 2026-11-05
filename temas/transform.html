@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Juego de caracteres de casi todos los idiomas humanos (incluidos ñ, tildes ...) -->
+        <meta charset="utf-8" />
+        <!-- Escala inicial y renderizado _responsive_ por el ancho del dispositivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Compatibilidad con Microsoft Explorer -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- Indéxame NO y sígueme NO -->
+        <meta name="robots" content="noIndex, noFollow" />
+        <!-- Breve descripción del sitio que se verá en los resultados de búsqueda -->
+        <meta name="description" content="Sitio web de prueba elaborado en el curso de Confección y Publicación de Páginas Web (IFCD0110). Unidad Formativa UF1303, Elaboración de hojas de estilos" />
+        <!-- Ruta al favicon -->
+        <link rel="icon" type="image/svg+xml" href="assets/svg/logo-pintografica-flavicon.svg" />
+        <!-- Utilícese una hoja de estilos Normalize -->
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+
+        <!-- Tipografía -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap" rel="stylesheet" />
+
+        <!-- Ruta a las hojas de estilos -->
+        <link rel="stylesheet" href="../assets/css/visibilidad.css" />
+        <link rel="stylesheet" href="../assets/css/hover.css" />
+        <link rel="stylesheet" href="../assets/css/transicions.css" />
+
+        <link rel="stylesheet" href="../assets/css/tipografía.css" />
+        <link rel="stylesheet" href="../assets/css/menu.css" />
+        <link rel="stylesheet" href="../assets/css/variables.css" />
+        <link rel="stylesheet" href="../assets/css/logo.css" />
+        <link rel="stylesheet" href="../assets/css/estilos8.css" />
+        <link rel="stylesheet" href="../assets/css/carrousel.css" />
+
+        <!-- Título de la pestaña del navegador -->
+        <title>UF1303 | Transform</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html" class="no-border" title="Página principal">
+                <figure class="logo"></figure>
+                <h1 class="pechado">Página de Transform</h1>
+            </a>
+        </header>
+
+        <nav class="principal" aria-label="Navegación principal">
+            <h2 class="pechado">Menú Principal</h2>
+            <input id="icon-menu" name="icon-menu" type="checkbox" />
+            <label for="icon-menu" class="icon-menu" aria-label="Abrir/Cerrar menú">Menú</label>
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Temas</a>
+                    <ul>
+                        <li>
+                            <a href="../temas/textos.html">Textos</a>
+                        </li>
+                        <li>
+                            <a href="../temas/imagenes.html">Imágenes</a>
+                        </li>
+                        <li>
+                            <a href="../temas/formularios.html">Formularios</a>
+                        </li>
+                        <li>
+                            <a href="../temas/regex.html">Patrones</a>
+                        </li>
+                        <li>
+                            <a href="transiciones.html">Transiciones</a>
+                        </li>
+                        <li>
+                            <a href="transform.html">Transform</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../legal/lopd.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="../contacto/contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="agua">
+            <section>
+                <header class="galeria-before portada">
+                    <h2 class="pinto-mayusculas">CCS | Propiedades transform</h2>
+                </header>
+
+                <article>
+                    <h3>¿Qué son?</h3>
+                    <p>La propiedad CSS transform cambia la representación visual de un elemento. Permite desplazarlo, girarlo, cambiar su escala o inclinarlo en dos dimensiones. También existen transformaciones 3D, que conviene estudiar después de dominar las básicas.</p>
+                    <figure class="pinto-transicion-color">
+                        <img src="https://ifcd0110.gitbook.io/uf1303/~gitbook/image?url=https%3A%2F%2F1278840849-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FoFvW03Hml8O4o5SSHxXT%252Fuploads%252FccheMOAtpd3VAwRThDIR%252Fimage.png%3Falt%3Dmedia%26token%3Dff5134b8-5110-42a1-9a1a-d875495a81dc&width=768&dpr=3&quality=100&sign=0ed2ab625ccd98f100c8bfd5fc1ed5da&sv=3" alt="Infografía para explicar la transiciones" width="100%" />
+                    </figure>
+                    <figure class="pinto-transicion-color"></figure>
+                    <br>
+
+                    <h4>Condiciones para que funcione:</h3>
+                        
+                        <p>Una transición necesita siempre dos ingredientes. Si falta uno, no verás nada:</p>
+                        <p>Un cambio de estado. Dos valores distintos de una misma propiedad (el «antes» y el «después»). Normalmente vienen de una pseudoclase como <code>:hover</code>, <code>:focus</code>, <code>:active</code>, o de una clase que añade JavaScript.</p>
+                        <p>Una declaración transition. Se escribe en el estado base del elemento, no (solo) en el estado <code>:hover</code>. Así la transición también se aplica al volver atrás.</p>
+                </article>
+
+                <article>
+                    <h3>Referencias</h3>
+                    <ul>
+                        <li><a href="">Transiciones de CSS | MDN</a>
+                            <ul>
+                                <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transition">transition</a></li>
+                                <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transition-delay">transition-delay</a></li>
+                                <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transition-duration">transition-duration</a></li>
+                                <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transition-property">transition-property</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition-timing-function">transition-timing-function</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Propiedades de CSS3 | W3docs</a></li>
+                         <li><a href="">Propiedad CSS transition-property | W3docs</a></li>
+                    </ul>
+                <br>
+                    <button class="pinto-boton">Vuelve al inicio</button>
+                </article>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>
