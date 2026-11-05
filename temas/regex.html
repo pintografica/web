@@ -117,7 +117,7 @@
                                         - Exactamente 5 dígitos.
                                         - Los dos primeros dígitos (provincia) van del 01 al 52.
                                     -->
-                                    <input type="text" id="cp" name="cp" pattern="(0[1-9]|[1-4][0-9]|5" required inputmode="numeric" title="El código postal solo debe contener los cinco números" />
+                                    <input type="text" id="cp" name="cp" pattern="(0[1-9]|[1-4][0-9]|5[0-2])[0-9]{3}" required inputmode="numeric" title="El código postal solo debe contener los cinco números" />
                                 </li>
                                 <li>
                                     <label for="movil">Teléfono móvil</label>
@@ -213,8 +213,8 @@
                                     <!-- 
                                         REQUISITOS:
                                         - Entre 4 y 16 caracteres en total.
-                                        - Debe empezar por una letra.
-                                        - Después solo letras, números o guion bajo.
+                                        - Debe empezar por una letra minúscula.
+                                        - Después solo letras minúsculas, números o guion bajo.
                                     -->
 
                                     <input type="text" id="usuario" name="usuario" required title="4 a 16 caracteres, empieza por letra; solo letras, números y _" pattern="[a-z][a-z0-9_]{3,15}" />
@@ -279,7 +279,7 @@
                                         Los números pueden comenzar por cero.
                                         La letra debe corresponder al resto módulo 23.
                                     -->
-                                    <input type="text" id="dni" name="dni" placeholder="12345678Z" maxlength="9" title="" required />
+                                    <input type="text" id="dni" name="dni" placeholder="12345678Z" maxlength="9" title="Introduzca un DNI válido" pattern="\d{8}[A-Z]{1}" required value="34341458D" />
                                 </li>
 
                                 <li>
@@ -290,7 +290,7 @@
                                         Comienza por X, Y o Z.
                                         Después tiene 7 números y una letra.
                                     -->
-                                    <input type="text" id="nie" name="nie" placeholder="X1234567L" maxlength="9" title="" />
+                                    <input type="text" id="nie" name="nie" placeholder="X1234567L" maxlength="9" title="Introduzca un NIE válido. Las letras deben estar en mayúsculas" pattern="[XYZ]\d{7}[A-Z]" value="Y8233857D" />
                                 </li>
 
                                 <li>
@@ -301,7 +301,7 @@
                                         Entre 2 y 30 caracteres.
                                         Admitir letras españolas, acentos y espacios.
                                     -->
-                                    <input type="text" id="nombre" name="nombre" maxlength="30" title="" required />
+                                    <input type="text" id="nombre" name="nombre" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜçÇ\- ]{2,}" title="El nombre sólo debe contener letras, espacios en blanco o guión normal" required />
                                 </li>
 
                                 <li>
@@ -312,7 +312,7 @@
                                         Entre 2 y 60 caracteres.
                                         Admitir letras, acentos, espacios y guiones.
                                     -->
-                                    <input type="text" id="apellidos" name="apellidos" maxlength="60" required />
+                                    <input type="text" id="apellidos" name="apellidos" maxlength="60" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜçÇ\- ]{2,}" title="El apellido sólo debe contener letras, espacios en blanco o guión normal" required />
                                 </li>
 
                                 <li>
@@ -323,7 +323,7 @@
                                         Debe ser una fecha comprendida entre 18 y 100 años.
                                         min y max son restricciones de fecha, no patrones.
                                     -->
-                                    <input type="date" id="nacimiento" name="nacimiento" min="" max="" required />
+                                    <input type="date" id="nacimiento" name="nacimiento" min="1926-01-01" max="2008-01-01" required />
                                 </li>
 
                                 <li>
@@ -333,23 +333,26 @@
                                         <option value="">Selecciona...</option>
                                         <option value="soltero">Soltero/a</option>
                                         <option value="casado">Casado/a</option>
+                                        <option value="pareja de hecho">Pareja de hecho</option>
+                                        <option value="separado">Separado/a</option>
                                         <option value="divorciado">Divorciado/a</option>
                                         <option value="viudo">Viudo/a</option>
                                     </select>
                                 </li>
 
                                 <li>
-                                    <label>Sexo (campo de ejemplo):</label>
-
-                                    <!-- INPUT CLÁSICO: radio -->
-                                    <input type="radio" name="sexo" value="hombre" />
-                                    Hombre
-
-                                    <input type="radio" name="sexo" value="mujer" />
-                                    Mujer
-
-                                    <input type="radio" name="sexo" value="otro" />
-                                    Otro / No especificar
+                                    <label>Estudios mínimos</label>
+                                    <select id="estudios" name="estudios" required>
+                                        <option value="">Selecciona...</option>
+                                        <option value="primaria">Primaria</option>
+                                        <option value="eso">ESO</option>
+                                        <option value="Bachiller">Bachillerato</option>
+                                        <option value="medio">FPI / Ciclo medio</option>
+                                        <option value="superior">FPII / Ciclo superior</option>
+                                        <option value="grado">E.U. Grado</option>
+                                        <option value="master">E. U. Máster</option>
+                                        <option value="doctorado">E. U. Doctorado</option>
+                                    </select>
                                 </li>
                             </ul>
                         </fieldset>
