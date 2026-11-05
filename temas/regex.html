@@ -271,7 +271,7 @@
 
                             <ul>
                                 <li>
-                                    <label for="dni">DNI:</label>
+                                    <label for="dni">* DNI o NIE:</label>
 
                                     <!-- 
                                         PISTA:
@@ -279,44 +279,44 @@
                                         Los números pueden comenzar por cero.
                                         La letra debe corresponder al resto módulo 23.
                                     -->
-                                    <input type="text" id="dni" name="dni" placeholder="12345678Z" maxlength="9" title="Introduzca un DNI válido" pattern="\d{8}[A-Z]{1}" required value="34341458D" />
+                                    <input type="text" id="dni" name="dni" placeholder="12345678Z" maxlength="9" title="Introduzca un DNI o NIE válido" pattern="[0-9X-Z]\d{7}[A-Z]" required value="34341458D" />
                                 </li>
 
                                 <li>
-                                    <label for="nie">NIE:</label>
-
-                                    <!-- 
-                                        PISTA:
-                                        Comienza por X, Y o Z.
-                                        Después tiene 7 números y una letra.
-                                    -->
-                                    <input type="text" id="nie" name="nie" placeholder="X1234567L" maxlength="9" title="Introduzca un NIE válido. Las letras deben estar en mayúsculas" pattern="[XYZ]\d{7}[A-Z]" value="Y8233857D" />
-                                </li>
-
-                                <li>
-                                    <label for="nombre">Nombre:</label>
+                                    <label for="nombre">* Nombre:</label>
 
                                     <!-- 
                                         PISTA:
                                         Entre 2 y 30 caracteres.
                                         Admitir letras españolas, acentos y espacios.
                                     -->
-                                    <input type="text" id="nombre" name="nombre" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜçÇ\- ]{2,}" title="El nombre sólo debe contener letras, espacios en blanco o guión normal" required />
+                                    <input type="text" id="nombre" name="nombre" maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜçÇ\- ]{2,}" title="El nombre sólo debe contener letras, espacios en blanco o guión normal" placeholder="Tu nombre" required />
                                 </li>
 
                                 <li>
-                                    <label for="apellidos">Apellidos:</label>
+                                    <label for="apellido-1">* Primer apellido:</label>
 
                                     <!-- 
                                         PISTA:
                                         Entre 2 y 60 caracteres.
                                         Admitir letras, acentos, espacios y guiones.
                                     -->
-                                    <input type="text" id="apellidos" name="apellidos" maxlength="60" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜçÇ\- ]{2,}" title="El apellido sólo debe contener letras, espacios en blanco o guión normal" required />
+                                    <input type="text" id="apellido-1" name="apellido-1" maxlength="60" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜçÇ\- ]{2,}" title="El apellido sólo debe contener letras, espacios en blanco o guión normal" placeholder="Primer apellido" required />
                                 </li>
 
                                 <li>
-                                    <label for="nacimiento">Fecha de nacimiento:</label>
+                                    <label for="apellido-2">* Segundo apellido:</label>
+
+                                    <!-- 
+                                        PISTA:
+                                        Entre 2 y 60 caracteres.
+                                        Admitir letras, acentos, espacios y guiones.
+                                    -->
+                                    <input type="text" id="apellido-2" name="apellido-2" maxlength="60" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜçÇ\- ]{2,}" title="El apellido sólo debe contener letras, espacios en blanco o guión normal" placeholder="Segundo apellido" required />
+                                </li>
+
+                                <li>
+                                    <label for="nacimiento">* Fecha de nacimiento:</label>
 
                                     <!-- 
                                         INPUT HTML5: date.
@@ -327,7 +327,7 @@
                                 </li>
 
                                 <li>
-                                    <label for="estadoCivil">Estado civil:</label>
+                                    <label for="estadoCivil">* Estado civil:</label>
 
                                     <select id="estadoCivil" name="estadoCivil" required>
                                         <option value="">Selecciona...</option>
@@ -341,7 +341,7 @@
                                 </li>
 
                                 <li>
-                                    <label>Estudios mínimos</label>
+                                    <label>* Estudios mínimos</label>
                                     <select id="estudios" name="estudios" required>
                                         <option value="">Selecciona...</option>
                                         <option value="primaria">Primaria</option>
