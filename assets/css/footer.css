@@ -73,8 +73,8 @@ body > footer {
             margin: 0 auto;
             margin-top: 5vh;
             margin-bottom: 5vh;
-            aspect-ratio: var(--ratio-logo);
-            background-image: url("../svg/logo.svg");
+            aspect-ratio: var(--logo-ratio);
+            background-image: url("../svg/logopintografica.svg");
             background-position: 50% 50%;
             background-repeat: no-repeat;
             background-size: cover;
