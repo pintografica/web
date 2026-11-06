@@ -1,3 +1,18 @@
+body {
+    position: relative;
+
+    & > header {
+        z-index: 3;
+    }
+    & > nav {
+        z-index: 2;
+    }
+
+    & > footer {
+        z-index: 1;
+    }
+}
+
 main {
     min-height: 100vh;
 }
