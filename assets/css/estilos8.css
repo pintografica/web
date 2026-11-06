@@ -115,9 +115,9 @@ a {
     padding: 0;
 } */
 
-article.galeria-flex {
+/* article.galeria-flex {
     background-color: var(--color-logo-secundario);
-}
+} */
 
 ul {
     list-style: none;
@@ -127,27 +127,6 @@ ul {
 
 figure {
     margin: 0;
-}
-
-header.portada {
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & h2 {
-        position: relative;
-        width: 100%;
-        margin: 0;
-        padding: 1em;
-        text-align: center;
-        color: #fff;
-        background-color: var(--color-logo-acento);
-
-        &:hover {
-            background-color: var(--bg-h2-color-secundario);
-        }
-    }
 }
 
 .galeria-before {
@@ -188,6 +167,53 @@ ul.galeria {
             &:hover::before {
                 transform: scale(1.2);
             }
+        }
+    }
+}
+
+header.portada {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h2 {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+        text-align: center;
+        color: #fff;
+        background-color: var(--color-logo-acento);
+        box-shadow: 10px 5px 5px #00000050;
+
+        &:hover {
+            background-color: var(--bg-h2-color-secundario);
+        }
+    }
+}
+
+header.portada {
+    &::before {
+        background-image: var(--portada-medium);
+        /* En el inspector de google podemos mirar los demás filtros que hay y cómo se modifican */
+        filter: blur(1px) hue-rotate(36deg);
+        box-shadow: 2px 4px 6px black;
+    }
+}
+
+@media (min-width: 600px) {
+    header.portada {
+        &::before {
+            background-image: var(--portada-large);
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    header.portada {
+        &::before {
+            background-image: var(--portada-original);
         }
     }
 }
@@ -235,7 +261,7 @@ ul.enlaces-pdf {
     color: #2b2729;
 
     &::before {
-        content: "Regla activa: CSS base (sin @media) → móvil, menos de 600px";
+        content: "";
     }
 }
 
@@ -244,7 +270,7 @@ ul.enlaces-pdf {
     .pinto-boton {
         background: var(--color-logo-secundario);
         &::before {
-            content: "Regla activa: @media (min-width: 600px) → tablet";
+            content: "";
         }
     }
 } /* verde */
@@ -254,7 +280,7 @@ ul.enlaces-pdf {
     .pinto-boton {
         background: var(--color-logo-acento);
         &::before {
-            content: "Regla activa: @media (min-width: 1024px) → monitor";
+            content: "";
         }
     } /* rosa claro */
 }
@@ -271,151 +297,21 @@ ul.enlaces-pdf {
   border: 3px solid rgb(128, 73, 0);
   font-family:impact;}   */
 
-/* Aquí empieza la galeria */
-ul.galeria {
-    & .diapositiva-1 {
-        &::before {
-            background-image: var(--galeria-1--thumb);
-        }
-    }
-    & .diapositiva-2 {
-        &::before {
-            background-image: var(--galeria-2--thumb);
-        }
-    }
-
-    & .diapositiva-3 {
-        &::before {
-            background-image: var(--galeria-3--thumb);
-        }
-    }
-    & .diapositiva-4 {
-        &::before {
-            background-image: var(--galeria-4--thumb);
-        }
-    }
-
-    & .diapositiva-5 {
-        &::before {
-            background-image: var(--galeria-5--thumb);
-        }
-    }
-}
-
-/*Aquí agregamos las media quaries para hacer el diseño responsive  */
-
-@media (min-width: 700px) {
-    article.galeria-flex {
-        background-color: var(--color-logo-acento);
-    }
-    ul.galeria {
-        & .diapositiva-1 {
-            &::before {
-                background-image: var(--galeria-1--medium);
-            }
-        }
-        & .diapositiva-2 {
-            &::before {
-                background-image: var(--galeria-2--medium);
-            }
-        }
-
-        & .diapositiva-3 {
-            &::before {
-                background-image: var(--galeria-3--medium);
-            }
-        }
-        & .diapositiva-4 {
-            &::before {
-                background-image: var(--galeria-4--medium);
-            }
-        }
-
-        & .diapositiva-5 {
-            &::before {
-                background-image: var(--galeria-5--medium);
-            }
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-    article.galeria-flex {
-        background-color: transparent;
-    }
-    ul.galeria {
-        & .diapositiva-1 {
-            &::before {
-                background-image: var(--galeria-1--large);
-            }
-        }
-        & .diapositiva-2 {
-            &::before {
-                background-image: var(--galeria-2--large);
-            }
-        }
-
-        & .diapositiva-3 {
-            &::before {
-                background-image: var(--galeria-3--large);
-            }
-        }
-        & .diapositiva-4 {
-            &::before {
-                background-image: var(--galeria-4--large);
-            }
-        }
-
-        & .diapositiva-5 {
-            &::before {
-                background-image: var(--galeria-5--large);
-            }
-        }
-    }
-}
-
-header.portada {
-    &::before {
-        background-image: var(--portada-medium);
-        /* En el inspector de google podemos mirar los demás filtros que hay y cómo se modifican */
-        filter: blur(1px) hue-rotate(36deg);
-        box-shadow: 2px 4px 6px black;
-    }
-}
-
-@media (min-width: 600px) {
-    header.portada {
-        &::before {
-            background-image: var(--portada-large);
-        }
-    }
-}
-
-@media (min-width: 900px) {
-    header.portada {
-        &::before {
-            background-image: var(--portada-original);
-        }
-    }
-}
-
-/* .ilustracion {
-    &::before
-    background-image: var(--img-avatar);
-}
+/* Avatar del creador */
 
 .avatar-pintografica {
     position: relative;
-    background-color: black;
+    height: 25rem;
 
     &::before {
         position: absolute;
         content: "";
-        width: 100%;
-        height: 100%;
+        width: 20em;
+        height: 20em;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
-        
+        background-image: var(--avatar-img);
+        border-radius: 50%;
     }
-}  */
+}

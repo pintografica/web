@@ -1,0 +1,135 @@
+/* GALERÍA DE INDEX: MUESTRA DE TRABAJO */
+
+ul.galeria-trabajos {
+    & .trabajo-1 {
+        &::before {
+            background-image: var(--galeria-trabajos-1--thumb);
+        }
+    }
+    & .trabajo-2 {
+        &::before {
+            background-image: var(--galeria-trabajos-2--thumb);
+        }
+    }
+
+    & .trabajo-3 {
+        &::before {
+            background-image: var(--galeria-trabajos-3--thumb);
+        }
+    }
+    & .trabajo-4 {
+        &::before {
+            background-image: var(--galeria-trabajos-4--thumb);
+        }
+    }
+
+    & .trabajo-5 {
+        &::before {
+            background-image: var(--galeria-trabajos-5--thumb);
+        }
+    }
+}
+
+/* GALERIA DE PÁGINA DE IMÁGENES */
+
+ul.galeria {
+    & .diapositiva-1 {
+        &::before {
+            background-image: var(--galeria-1--thumb);
+        }
+    }
+    & .diapositiva-2 {
+        &::before {
+            background-image: var(--galeria-2--thumb);
+        }
+    }
+
+    & .diapositiva-3 {
+        &::before {
+            background-image: var(--galeria-3--thumb);
+        }
+    }
+    & .diapositiva-4 {
+        &::before {
+            background-image: var(--galeria-4--thumb);
+        }
+    }
+
+    & .diapositiva-5 {
+        &::before {
+            background-image: var(--galeria-5--thumb);
+        }
+    }
+}
+
+/*Aquí agregamos las media quaries para hacer el diseño responsive  */
+
+@media (min-width: 700px) {
+    article.galeria-flex {
+        background-color: var(--color-logo-acento);
+    }
+    ul.galeria {
+        & .diapositiva-1 {
+            &::before {
+                background-image: var(--galeria-1--medium);
+            }
+        }
+        & .diapositiva-2 {
+            &::before {
+                background-image: var(--galeria-2--medium);
+            }
+        }
+
+        & .diapositiva-3 {
+            &::before {
+                background-image: var(--galeria-3--medium);
+            }
+        }
+        & .diapositiva-4 {
+            &::before {
+                background-image: var(--galeria-4--medium);
+            }
+        }
+
+        & .diapositiva-5 {
+            &::before {
+                background-image: var(--galeria-5--medium);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    article.galeria-flex {
+        background-color: transparent;
+    }
+    ul.galeria {
+        & .diapositiva-1 {
+            &::before {
+                background-image: var(--galeria-1--large);
+            }
+        }
+        & .diapositiva-2 {
+            &::before {
+                background-image: var(--galeria-2--large);
+            }
+        }
+
+        & .diapositiva-3 {
+            &::before {
+                background-image: var(--galeria-3--large);
+            }
+        }
+        & .diapositiva-4 {
+            &::before {
+                background-image: var(--galeria-4--large);
+            }
+        }
+
+        & .diapositiva-5 {
+            &::before {
+                background-image: var(--galeria-5--large);
+            }
+        }
+    }
+}
