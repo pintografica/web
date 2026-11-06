@@ -40,6 +40,9 @@
     --logo-ratio: 1600/900;
     --marca-agua-h: 5rem;
 
+    /* Avatar del sitio  */
+    --avatar-img: url("../img/ilustración-pintografica.webp");
+
     /* Portada del sitio */
     --portada-original: url("../img/codigo-portada.webp");
     --portada-thumb: url("../img/codigo-portada-300.webp");
