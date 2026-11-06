@@ -109,4 +109,36 @@
     --carrousel-5-medium-large: url("https://pixfill.dev/768x512/d28065/ffffff");
     --carrousel-5-medium: url("https://pixfill.dev/480x320/d28065/ffffff");
     --carrousel-5-thumb: url("https://pixfill.dev/300x200/d28065/ffffff");
+
+    /* Imágenes de la galeria de trabajos */
+
+    --galeria-trabajos-1--origin: url("../img/index/blog-origin.webp");
+    --galeria-trabajos-1--large: url("../img/index/blog-large.webp");
+    --galeria-trabajos-1--medium-large: url("../img/index/blog-medium-large.webp");
+    --galeria-trabajos-1--medium: url("../img/index/blog-medium.webp");
+    --galeria-trabajos-1--thumb: url("../img/index/blog-thumb.webp");
+
+    --galeria-trabajos-2--origin: url("../img/index/cv-origin.webp");
+    --galeria-trabajos-2--large: url("../img/index/cv-large.webp");
+    --galeria-trabajos-2--medium-large: url("../img/index/cv-medium-large.webp");
+    --galeria-trabajos-2--medium: url("../img/index/cv-medium.webp");
+    --galeria-trabajos-2--thumb: url("../img/index/cv-thumb.webp");
+
+    --galeria-trabajos-3--origin: url("../img/index/audio-video-oring.webp");
+    --galeria-trabajos-3--large: url("../img/index/audio-video-large.webp");
+    --galeria-trabajos-3--medium-large: url("../img/index/audio-video-medium-large.webp");
+    --galeria-trabajos-3--medium: url("../img/index/audio-video-medium.webp");
+    --galeria-trabajos-3--thumb: url("../img/index/audio-video-thumb.webp");
+
+    --galeria-trabajos-4--origin: url("../img/index/portfolio-oring.webp");
+    --galeria-trabajos-4--large: url("../img/index/portfolio-large.webp");
+    --galeria-trabajos-4--medium-large: url("../img/index/portfolio-medium-large.webp");
+    --galeria-trabajos-4--medium: url("../img/index/portfolio-medium.webp");
+    --galeria-trabajos-4--thumb: url("../img/index/portfolio-thumb.webp");
+
+    --galeria-trabajos-5--origin: url("../img/index/webencontrucción-oring.webp");
+    --galeria-trabajos-5--large: url("../img/index/webencontrucción-large.webp");
+    --galeria-trabajos-5--medium-large: url("../img/index/webencontrucción-medium-large.webp");
+    --galeria-trabajos-5--medium: url("../img/index/webencontrucción-medium.webp");
+    --galeria-trabajos-5--thumb: url("../img/index/webencontrucción-thumb.webp");
 }
