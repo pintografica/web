@@ -132,7 +132,6 @@ h3 {
 /* Para que no afecte a todos los enlaces debo colocar el :not y entre parentesis la clase que aplicaré a los (a) para que no salga en los enlaces del logo u otros */
 a:not(.no-border),
 abbr {
-    display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);

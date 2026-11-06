@@ -10,6 +10,7 @@ body {
 
     & > footer {
         z-index: 1;
+        position: relative;
     }
 }
 
@@ -26,6 +27,7 @@ body {
         padding-right: 4vw;
     }
 
+    & > footer,
     & main > section > article {
         padding: 5vh;
         padding-left: 4vw;
@@ -43,6 +45,7 @@ body {
             padding-right: 7.5vw;
         }
 
+        & > footer,
         & main > section > article {
             padding-left: 7.5vw;
             padding-right: 7.5vw;
@@ -60,6 +63,7 @@ body {
             padding-right: 10vw;
         }
 
+        & > footer,
         & main > section > article {
             padding-left: 10vw;
             padding-right: 10vw;
