@@ -30,6 +30,78 @@ ul.galeria-trabajos {
     }
 }
 
+/*Aquí agregamos las media quaries para hacer el diseño responsive de la galeria del index */
+
+@media (min-width: 700px) {
+    article.galeria-flex {
+        /* background-color: var(--color-logo-acento); */
+    }
+    ul.galeria-trabajos {
+        & .trabajo-1 {
+            &::before {
+                background-image: var(--galeria-trabajos-1--medium);
+            }
+        }
+        & .trabajo-2 {
+            &::before {
+                background-image: var(--galeria-trabajos-2--medium);
+            }
+        }
+
+        & .trabajo-3 {
+            &::before {
+                background-image: var(--galeria-trabajos-3--medium);
+            }
+        }
+        & .trabajo-4 {
+            &::before {
+                background-image: var(--galeria-trabajos-4--medium);
+            }
+        }
+
+        & .trabajo-5 {
+            &::before {
+                background-image: var(--galeria-trabajos-5--medium);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    article.galeria-flex {
+        background-color: transparent;
+    }
+    ul.galeria-trabajos {
+        & .trabajo-1 {
+            &::before {
+                background-image: var(--galeria-trabajos-1--large);
+            }
+        }
+        & .trabajo-2 {
+            &::before {
+                background-image: var(--galeria-trabajos-2--large);
+            }
+        }
+
+        & .trabajo-3 {
+            &::before {
+                background-image: var(--galeria-trabajos-3--large);
+            }
+        }
+        & .trabajo-4 {
+            &::before {
+                background-image: var(--galeria-trabajos-4--large);
+            }
+        }
+
+        & .trabajo-5 {
+            &::before {
+                background-image: var(--galeria-trabajos-5--large);
+            }
+        }
+    }
+}
+
 /* GALERIA DE PÁGINA DE IMÁGENES */
 
 ul.galeria {
@@ -66,7 +138,7 @@ ul.galeria {
 
 @media (min-width: 700px) {
     article.galeria-flex {
-        background-color: var(--color-logo-acento);
+        /* background-color: var(--color-logo-acento); */
     }
     ul.galeria {
         & .diapositiva-1 {
