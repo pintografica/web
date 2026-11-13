@@ -403,3 +403,15 @@ ul.enlaces-pdf {
         font-size: 30px;
     }
 }
+
+.resume-container {
+    border: 2px solid;
+    padding: 2em;
+    border-radius: 8px;
+    background-color: var(--color-logo-acento);
+
+    & p {
+        color: beige;
+        text-align: center;
+    }
+}
