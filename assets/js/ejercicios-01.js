@@ -5,7 +5,7 @@ function sumaDosNumeros() {
 
 	let n1 = parseFloat(prompt("Introduce el primer número:"))
 	
-	let n1 = parseFloat(prompt("Introduce el segundo número:"))
+	let n2 = parseFloat(prompt("Introduce el segundo número:"))
 	
 	let suma = n1 + n2;
     alert("La multiplicación de " + n1 + " + " + n2 + " es " + suma);
@@ -17,7 +17,7 @@ function restaDosNumeros() {
 
 	let n1 = parseFloat(prompt("Introduce el primer número:"))
 	
-	let n1 = parseFloat(prompt("Introduce el segundo número:"))
+	let n2 = parseFloat(prompt("Introduce el segundo número:"))
 	
 	let resta = n1 - n2;
     alert("La multiplicación de " + n1 + " - " + n2 + " es " + resta);
