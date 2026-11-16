@@ -408,10 +408,11 @@ ul.enlaces-pdf {
     border: 2px solid;
     padding: 2em;
     border-radius: 8px;
-    background-color: var(--color-logo-acento);
+    background-color: #f797c780;
 
     & p {
-        color: beige;
+        color: grey;
         text-align: center;
+        font-size: 1.3rem;
     }
 }
