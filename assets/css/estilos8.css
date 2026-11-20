@@ -408,10 +408,8 @@ ul.enlaces-pdf {
     border: 2px solid;
     padding: 2em;
     border-radius: 8px;
-    background-color: #f797c7;
 
     & p {
-        color: white;
         text-align: center;
         font-size: 1.3rem;
     }
