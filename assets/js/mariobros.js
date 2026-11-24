@@ -83,3 +83,40 @@ itemsPaletaColores.forEach(function (li) {
 figuras.forEach(function (figura) {
     figura.onclick = pintarFigura;
 });
+
+// Ejercicio extra: Agregar un nuevo figure
+
+// No declaramos de nuevo la lista
+let li = document.createElement("li");
+let figure = document.createElement("figure");
+let figcaption = document.createElement("figcaption");
+
+ulGaleriaMario.appendChild(li);
+li.appendChild(figure);
+figure.appendChild(figcaption);
+
+figuras = document.querySelectorAll("#galeria-mario figure");
+
+// Agregamos la clase galeria-before
+figure.classList.add("galeria-before");
+
+// Agregamos el nombre del personaje
+personajesGaleriaMario.push("Lakitu");
+bgColorsGaleriaMario.push("Salmon");
+
+figcaption.textContent = personajesGaleriaMario[personajesGaleriaMario.length - 1];
+figure.style.backgroundColor = bgColorsGaleriaMario[figuras.length - 1];
+
+// Otra manera:
+// figuras = document.querySelectorAll("#galeria-mario figure");
+// captions = document.querySelectorAll("#galeria-mario figcaption");
+// figuras.forEach(function (figura, indice) {
+//     figura.style.backgroundColor = bgColorsGaleriaMario[indice];
+// });
+// captions.forEach(function (caption, indice) {
+//     caption.textContent = personajesGaleriaMario[indice];
+// });
+
+// Una manera de hacerlo:
+// figuras[figuras.length - 1].querySelector("figcaption").textContent = personajesGaleriaMario[figuras.length - 1];
+// figuras[figuras.length - 1].style.backgroundColor = bgColorsGaleriaMario[figuras.length - 1];
