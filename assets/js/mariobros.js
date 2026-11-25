@@ -31,7 +31,7 @@ let bgColorsGaleriaMario = ["steelblue", "orange", "gold", "orchid", "green", "h
 let figuras = document.querySelectorAll("#galeria-mario figure");
 let captions = document.querySelectorAll("#galeria-mario figcaption");
 
-console.log(captions);
+// console.log(captions);
 
 figuras.forEach(function (figura, indice) {
     figura.style.backgroundColor = bgColorsGaleriaMario[indice];
@@ -57,36 +57,9 @@ itemsPaletaColores.forEach(function (li) {
     li.style.backgroundColor = li.textContent;
 });
 
-// Ejercicio 2. 2: Guardar ese color y aplicarlo al figure que se le haga clic
-
-function seleccionarColor() {
-    colorSeleccionado = this.textContent;
-    info.textContent = `Color seleccionado: ${colorSeleccionado}`;
-}
-
-function pintarFigura() {
-    if (colorSeleccionado === null) {
-        info.textContent = "Primero elige un color de la paleta";
-        return;
-    }
-
-    this.style.backgroundColor = colorSeleccionado;
-    info.textContent = `${this.textContent} ahora es ${colorSeleccionado}`;
-}
-
-// Conectar cada función con sus elementos:
-
-itemsPaletaColores.forEach(function (li) {
-    li.onclick = seleccionarColor;
-});
-
-figuras.forEach(function (figura) {
-    figura.onclick = pintarFigura;
-});
-
 // Ejercicio extra: Agregar un nuevo figure
 
-// No declaramos de nuevo la lista
+// No declaramos de nuevo la lista: let ulGaleriaMario = document.querySelector("#galeria-mario ul.galeria");
 let li = document.createElement("li");
 let figure = document.createElement("figure");
 let figcaption = document.createElement("figcaption");
@@ -120,3 +93,31 @@ figure.style.backgroundColor = bgColorsGaleriaMario[figuras.length - 1];
 // Una manera de hacerlo:
 // figuras[figuras.length - 1].querySelector("figcaption").textContent = personajesGaleriaMario[figuras.length - 1];
 // figuras[figuras.length - 1].style.backgroundColor = bgColorsGaleriaMario[figuras.length - 1];
+
+// Ejercicio 2. 2: Guardar ese color y aplicarlo al figure que se le haga clic
+// Se pone de último otra vez para que se aplique al nuevo figure
+
+function seleccionarColor() {
+    colorSeleccionado = this.textContent;
+    info.textContent = `Color seleccionado: ${colorSeleccionado}`;
+}
+
+function pintarFigura() {
+    if (colorSeleccionado === null) {
+        info.textContent = "Primero elige un color de la paleta";
+        return;
+    }
+
+    this.style.backgroundColor = colorSeleccionado;
+    info.textContent = `${this.textContent} ahora es ${colorSeleccionado}`;
+}
+
+// Conectar cada función con sus elementos:
+
+itemsPaletaColores.forEach(function (li) {
+    li.onclick = seleccionarColor;
+});
+
+figuras.forEach(function (figura) {
+    figura.onclick = pintarFigura;
+});
