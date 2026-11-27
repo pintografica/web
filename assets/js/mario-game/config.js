@@ -6,7 +6,7 @@
 
 export const CONFIG = {
     // Carpeta de las imágenes (relativa al HTML)
-    RUTA_IMG: "../assets/img/marioBros/",
+    RUTA_IMG: "../assets/img/mariobros/",
 
     // prettier-ignore
     SPRITES: [
