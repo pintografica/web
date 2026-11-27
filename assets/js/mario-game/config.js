@@ -25,6 +25,9 @@ export const CONFIG = {
     // Monedas que aparecen en cada tanda
     CANTIDAD_MONEDAS: 8,
 
+    // Probabilidad (0 a 1) de que una moneda de la tanda sea maldita
+    PROBABILIDAD_MALDITA: 0.3,
+
     // Duración (ms) de la transición al avanzar o retroceder
     VELOCIDAD: 800,
 };
