@@ -30,52 +30,17 @@
         <link rel="stylesheet" href="../assets/css/logo.css" />
         <link rel="stylesheet" href="../assets/css/estilos8.css" />
         <link rel="stylesheet" href="../assets/css/formularios.css" />
+        <link rel="stylesheet" href="../assets/css/footer.css" />
+
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
 
         <!-- Título de la pestaña del navegador -->
         <title>UF1303 y UF1303 | Formulario enviado | Web de ejercicios de curso de creación de páginas web</title>
     </head>
 
     <body>
-        <header>
-            <a href="../index.html" class="no-border" title="Página principal">
-                <figure class="logo"></figure>
-                <h1 class="pechado">Validación de Formularios con HTML5</h1>
-            </a>
-        </header>
-
-        <nav class="principal" aria-label="Navegación principal">
-            <h2 class="pechado">Menú Principal</h2>
-            <input id="icon-menu" name="icon-menu" type="checkbox" />
-            <label for="icon-menu" class="icon-menu" aria-label="Abrir/Cerrar menú">Menú</label>
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="#">Temas</a>
-                    <ul>
-                        <li>
-                            <a href="textos.html">Textos</a>
-                        </li>
-                        <li>
-                            <a href="imagenes.html">Imágenes</a>
-                        </li>
-                        <li>
-                            <a href="../temas/formularios.html">Formularios</a>
-                        </li>
-                        <li>
-                            <a href="../temas/regex.html">Patrones</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="../legal/lopd.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="../contacto/contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
+        <header id="header"></header>
+        <nav id="menu" class="principal" aria-label="Navegación principal"></nav>
 
         <main class="agua">
             <section>
@@ -87,6 +52,20 @@
                 </article>
             </section>
         </main>
-        <footer></footer>
+        <footer id="footer"></footer>
+
+        <script type="module">
+            async function includeHTML(selector, url) {
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error(`Error cargando ${url}: ${response.status}`);
+                }
+
+                document.querySelector(selector).innerHTML = await response.text();
+            }
+
+            await Promise.all([includeHTML("#header", "../layouts/header.html"), includeHTML("#menu", "../layouts/nav.html"), includeHTML("#footer", "../layouts/footer.html")]);
+        </script>
     </body>
 </html>
